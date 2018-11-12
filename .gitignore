@@ -1,0 +1,14 @@
+# Hidden Files (override with 'add -f') #
+.*
+!.gitignore
+
+# OS generated files #
+.DS_Store
+.DS_Store?
+*.DS_Store
+*.DS_Store?
+._*
+
+# IntelliJ generated files #
+.idea/
+*.iml
