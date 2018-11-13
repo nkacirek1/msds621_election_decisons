@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+from winners import won
 import pandas as pd
 import numpy as np
 
@@ -71,6 +72,7 @@ class Votes:
         rep_ratios = self.republicanRatioByStrata()
         dd_cor = self.corr_by_strata()
         rr_cor = self.corr_by_strata(dem=False)
+        race = self.df['STATE'].unique()[0] + '_' + str(district)
 
         strata_tbl = pd.DataFrame({
             'STATE': self.df['STATE'].unique()[0],
@@ -86,7 +88,8 @@ class Votes:
             'S3_COR(DD)': dd_cor[2],
             'S1_COR(RR)': rr_cor[0],
             'S2_COR(RR)': rr_cor[1],
-            'S3_COR(RR)': rr_cor[2]
+            'S3_COR(RR)': rr_cor[2],
+            'WINNER': won[race]
         }, index=[0])
 
         return strata_tbl

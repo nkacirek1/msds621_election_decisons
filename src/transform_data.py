@@ -1,4 +1,5 @@
 from SmallVoteLib import *
+import os
 import sys
 
 
@@ -55,14 +56,33 @@ def process_one_district(old_file, new_file, district):
     return votes_obj.wide_strata_summary(district)  # will give a row per district
 
 
+def mostrecent(files):
+    """Helper to get more recently scrapped file"""
+    if len(files) > 0:
+        int_names = [int(f.split('.')[0]) for f in files]
+        most_recent = max(int_names)
+        index = int_names.index(most_recent)
+    else:
+        raise RuntimeError('File %s not found' % files)
+    return files[index]
+
+
+def get_filepaths():
+
+
+    return None
+
+
 if __name__ == '__main__':
 
     # set up columns for final df
     columns = ['STATE', 'DISTRICT', 'S1_DEM_RATIO', 'S2_DEM_RATIO', 'S3_DEM_RATIO',
                'S1_REP_RATIO', 'S2_REP_RATIO', 'S3_REP_RATIO', 'S1_COR(DD)',
-               'S2_COR(DD)', 'S3_COR(DD)', 'S1_COR(RR)', 'S2_COR(RR)', 'S3_COR(RR)']
-
+               'S2_COR(DD)', 'S3_COR(DD)', 'S1_COR(RR)', 'S2_COR(RR)', 'S3_COR(RR)',
+               'WINNER']
     df = pd.DataFrame(columns=columns)
+
+    # TODO: PUT IN A LOOP FOR ALL THE FILENAMES
     new_df_row = process_one_district(sys.argv[1], sys.argv[2], 1)
     df = df.append(new_df_row)
     print(df)

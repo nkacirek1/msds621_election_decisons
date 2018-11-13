@@ -12,4 +12,4 @@
 # IntelliJ generated files #
 .idea/
 *.iml
-__pycache__/
+*__pycache__*
