@@ -63,11 +63,11 @@ file_list_14 = [(f.split('_')[0], '/Users/sarahmelancon/Desktop/FL14/' + f) for 
 for file in file_list_12:
     print('2012: ' + file[0])
     df = create_past(file[1])
-    df.to_csv(file[0] + '_2012', index=False)
+    df.to_csv('FL_counties/' + file[0] + '_2012', index=False)
 
 for file in file_list_14:
     print('2014: ' + file[0])   
     frames = create_present(file[1])
     for frame in frames:
-        frame[0].to_csv(file[0] + '_2014_D' + frame[1], index=False)
+        frame[0].to_csv('FL_counties/' + file[0] + '_2014_D' + frame[1], index=False)
 
