@@ -23,17 +23,24 @@ def create_past(filename):
 
 
 def create_present(filename):
-    df_present = pd.read_csv(filename, sep='\t', header=None)
+    df_present = pd.read_table(filename, sep='\t', header=None, encoding='latin_1')
     df_present.columns = column_list
-    df_present = df_present[['COUNTY', 'PRECINCT', 'CONTEST_NAME', 'CANDIDATE', 'CANDIDATE_PARTY', 'VOTE_TOTAL']]
+    df_present = df_present[['COUNTY', 'PRECINCT', 'DISTRICT', 'CONTEST_NAME', 'CANDIDATE', 'CANDIDATE_PARTY', 'VOTE_TOTAL']]
     df_present = df_present[df_present['CONTEST_NAME']=='U.S. Representative']
     df_present = df_present.drop(columns=['CONTEST_NAME','CANDIDATE'])
-    df_present = df_present[df_present['CANDIDATE_PARTY'] == 'DEM'].merge(df_present[df_present['CANDIDATE_PARTY'] == 'REP'], on=['COUNTY','PRECINCT'])
-    df_present = df_present.rename({'VOTE_TOTAL_x':'NEW_DEM', 'VOTE_TOTAL_y':'NEW_REP'}, axis=1)
-    df_present = df_present.drop(columns=['CANDIDATE_PARTY_x', 'CANDIDATE_PARTY_y'])
-    df_present['STATE'] = 'FL'
-    df_present = df_present[['STATE', 'COUNTY', 'PRECINCT', 'NEW_DEM', 'NEW_REP']]
-    return df_present
+    districts = df_present.DISTRICT.unique()
+
+    frames = []
+    for district in districts:
+        df_district = df_present[df_present['DISTRICT']==district]
+        df_district = df_district[df_district['CANDIDATE_PARTY'] == 'DEM'].merge(df_district[df_district['CANDIDATE_PARTY'] == 'REP'], on=['COUNTY','PRECINCT'])
+        df_district = df_district.rename({'VOTE_TOTAL_x':'NEW_DEM', 'VOTE_TOTAL_y':'NEW_REP'}, axis=1)
+        df_district = df_district.drop(columns=['CANDIDATE_PARTY_x', 'CANDIDATE_PARTY_y', 'DISTRICT_x', 'DISTRICT_y'])
+        df_district['STATE'] = 'FL'
+        df_district = df_district[['STATE', 'COUNTY', 'PRECINCT', 'NEW_DEM', 'NEW_REP']]
+        frames.append((df_district, district.split()[1]))
+
+    return frames
 
 file_list_12 = []
 for name in os.walk('/Users/sarahmelancon/Desktop/FL12/'):
@@ -56,13 +63,11 @@ file_list_14 = [(f.split('_')[0], '/Users/sarahmelancon/Desktop/FL14/' + f) for 
 for file in file_list_12:
     print('2012: ' + file[0])
     df = create_past(file[1])
-    df.to_csv(file[0] + '_12', index=False)
+    df.to_csv(file[0] + '_2012', index=False)
 
 for file in file_list_14:
-    print('2014: ' + file[0])
-    try:    
-        df = create_present(file[1])
-        df.to_csv(file[0] + '_14', index=False)
-    except:
-        print(file[0] + ' did not work')
+    print('2014: ' + file[0])   
+    frames = create_present(file[1])
+    for frame in frames:
+        frame[0].to_csv(file[0] + '_2014_D' + frame[1], index=False)
 
