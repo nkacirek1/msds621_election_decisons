@@ -64,19 +64,20 @@ class Votes:
             corrs_only = [corrs.iloc[[i]][0] for i in range(len(corrs))]
             return corrs_only
 
-    def wide_strata_summary(self, district):
+    def wide_strata_summary(self, race, race_type):
         """
         Build the data frame per district for ml project
         """
         dem_ratios = self.democraticRatioByStrata()
+        print(dem_ratios)
         rep_ratios = self.republicanRatioByStrata()
         dd_cor = self.corr_by_strata()
         rr_cor = self.corr_by_strata(dem=False)
-        race = self.df['STATE'].unique()[0] + '_' + str(district)
+        race = self.df['STATE'].unique()[0] + '_' + race
 
         strata_tbl = pd.DataFrame({
             'STATE': self.df['STATE'].unique()[0],
-            'DISTRICT': str(district),
+            'RACE': race_type,
             'S1_DEM_RATIO': dem_ratios[0],
             'S2_DEM_RATIO': dem_ratios[1],
             'S3_DEM_RATIO': dem_ratios[2],

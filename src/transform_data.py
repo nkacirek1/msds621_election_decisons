@@ -38,11 +38,12 @@ def strata_maker(df, num_strata):
     return df
 
 
-def process_one_district(old_file, new_file, district):
+def process_one_district(old_file, new_file, race, racetype):
     """
     :param old_file: filename of older vote totals (earlier year)
     :param new_file: filename of new vote totals (later year)
-    :param district: integer district number
+    :param race: D#, SEN, GOV
+    :param racetype: D, G, or S
     :return: a pandas df of a single row
     """
     old_df = pd.read_csv(old_file, dtype={'COUNTY': str, 'PRECINCT': str})
@@ -53,7 +54,7 @@ def process_one_district(old_file, new_file, district):
 
     votes_obj = Votes(with_strata)  # create the vote object
 
-    return votes_obj.wide_strata_summary(district)  # will give a row per district
+    return votes_obj.wide_strata_summary(race, racetype)  # will give a row per district
 
 
 def mostrecent(files):
@@ -67,22 +68,53 @@ def mostrecent(files):
     return files[index]
 
 
-def get_filepaths():
+def get_filepaths(path, alert):
+    """
+    For a specified alert
+    :return: the filepaths for a given alertname
+    """
+    data2016 = path + 'msds621_election_decisons/data/data2016/'
+    scrape_2018 = path + 'msds621_election_decisons/data/scrape_2018/'
 
+    paths = []
 
-    return None
+    races = [d for d in os.listdir(data2016 + alert) if not d.startswith('.')]
+
+    for r in races:
+        results_2016 = data2016 + alert + '/' + r + '/results2016.csv'
+
+        files = [d for d in os.listdir(scrape_2018 + alert + '/' + r + '/') if
+                 not d.startswith('.')]
+        last_scrape = scrape_2018 + alert + '/' + r + '/' + mostrecent(files)
+
+        paths.append((results_2016, last_scrape, r))
+
+    return paths
 
 
 if __name__ == '__main__':
 
-    # set up columns for final df
-    columns = ['STATE', 'DISTRICT', 'S1_DEM_RATIO', 'S2_DEM_RATIO', 'S3_DEM_RATIO',
+    # build empty df with proper columns
+    columns = ['STATE', 'RACE', 'S1_DEM_RATIO', 'S2_DEM_RATIO', 'S3_DEM_RATIO',
                'S1_REP_RATIO', 'S2_REP_RATIO', 'S3_REP_RATIO', 'S1_COR(DD)',
                'S2_COR(DD)', 'S3_COR(DD)', 'S1_COR(RR)', 'S2_COR(RR)', 'S3_COR(RR)',
                'WINNER']
     df = pd.DataFrame(columns=columns)
 
-    # TODO: PUT IN A LOOP FOR ALL THE FILENAMES
-    new_df_row = process_one_district(sys.argv[1], sys.argv[2], 1)
-    df = df.append(new_df_row)
-    print(df)
+    abs_path = sys.argv[1]  # /Users/nicolekacirek/Desktop/USF/Fall_Module_2/Machine_Learning/
+
+    alerts = [d for d in os.listdir(abs_path + 'msds621_election_decisons/data/data2016/') if not d.startswith('.')]
+
+    path_pairs = []
+    for a in alerts:
+        path_pairs.extend(get_filepaths(abs_path, a))
+
+    # path_pairs = get_filepaths(abs_path, 'NC_SOS')
+
+    for p in path_pairs:
+        print(p[2], p[2][0])
+        new_df_row = process_one_district(p[0], p[1], p[2], p[2][0])
+        df = df.append(new_df_row)
+
+    df.to_csv(abs_path + 'msds621_election_decisons/data/final.csv')
+
