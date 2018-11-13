@@ -49,7 +49,7 @@ if __name__ == '__main__':
 
     votes_obj = Votes(with_strata)  # create the vote object
 
-    print(votes_obj.strataSummary(printable=False))
+    print(votes_obj.wide_strata_summary(1)) # will give a row per district
 
 
 
