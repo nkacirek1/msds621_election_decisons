@@ -12,4 +12,6 @@
 # IntelliJ generated files #
 .idea/
 *.iml
-*__pycache__*
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
