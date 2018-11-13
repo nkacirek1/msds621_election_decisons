@@ -37,10 +37,13 @@ def strata_maker(df, num_strata):
     return df
 
 
-if __name__ == '__main__':
-    old_file = sys.argv[1]
-    new_file = sys.argv[2]
-
+def process_one_district(old_file, new_file, district):
+    """
+    :param old_file: filename of older vote totals (earlier year)
+    :param new_file: filename of new vote totals (later year)
+    :param district: integer district number
+    :return: a pandas df of a single row
+    """
     old_df = pd.read_csv(old_file, dtype={'COUNTY': str, 'PRECINCT': str})
     new_df = pd.read_csv(new_file, dtype={'COUNTY': str, 'PRECINCT': str})
 
@@ -49,10 +52,17 @@ if __name__ == '__main__':
 
     votes_obj = Votes(with_strata)  # create the vote object
 
-    print(votes_obj.wide_strata_summary(1)) # will give a row per district
+    return votes_obj.wide_strata_summary(district)  # will give a row per district
 
 
+if __name__ == '__main__':
 
+    # set up columns for final df
+    columns = ['STATE', 'DISTRICT', 'S1_DEM_RATIO', 'S2_DEM_RATIO', 'S3_DEM_RATIO',
+               'S1_REP_RATIO', 'S2_REP_RATIO', 'S3_REP_RATIO', 'S1_COR(DD)',
+               'S2_COR(DD)', 'S3_COR(DD)', 'S1_COR(RR)', 'S2_COR(RR)', 'S3_COR(RR)']
 
-
-
+    df = pd.DataFrame(columns=columns)
+    new_df_row = process_one_district(sys.argv[1], sys.argv[2], 1)
+    df = df.append(new_df_row)
+    print(df)
