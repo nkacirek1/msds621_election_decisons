@@ -112,9 +112,8 @@ if __name__ == '__main__':
     # path_pairs = get_filepaths(abs_path, 'NC_SOS')
 
     for p in path_pairs:
-        print(p[2], p[2][0])
         new_df_row = process_one_district(p[0], p[1], p[2], p[2][0])
         df = df.append(new_df_row)
 
-    df.to_csv(abs_path + 'msds621_election_decisons/data/final.csv')
+    df.to_csv(abs_path + 'msds621_election_decisons/data/final.csv', index=False)
 

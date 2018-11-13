@@ -69,7 +69,6 @@ class Votes:
         Build the data frame per district for ml project
         """
         dem_ratios = self.democraticRatioByStrata()
-        print(dem_ratios)
         rep_ratios = self.republicanRatioByStrata()
         dd_cor = self.corr_by_strata()
         rr_cor = self.corr_by_strata(dem=False)
