@@ -1,4 +1,5 @@
 won = {
+    'AR_D1': 'R', 'AR_D2': 'R', 'AR_D3': 'R', 'AR_D4': 'R', 'AR_GOV': 'R',
     'GA_D1': 'R', 'GA_D2': 'D', 'GA_D3': 'R', 'GA_D4': 'D',
     'GA_D6': 'D', 'GA_D9': 'R', 'GA_D10': 'R', 'GA_D11': 'R',
     'GA_D12': 'R', 'GA_D13': 'D', 'GA_D14': 'R',
