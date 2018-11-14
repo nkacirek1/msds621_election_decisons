@@ -109,7 +109,7 @@ if __name__ == '__main__':
     for a in alerts:
         path_pairs.extend(get_filepaths(abs_path, a))
 
-    # path_pairs = get_filepaths(abs_path, 'NC_SOS')
+    #path_pairs = get_filepaths(abs_path, 'AR_SOS')
 
     for p in path_pairs:
         new_df_row = process_one_district(p[0], p[1], p[2], p[2][0])

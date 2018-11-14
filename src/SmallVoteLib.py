@@ -46,7 +46,9 @@ class Votes:
              A list of the ratios by strata
         """
         df_copy = self.df.copy()
+        df_copy.loc[df_copy.PAST_REP == 0.0, 'PAST_REP'] = 1.0
         df_copy['PAST_REP_Ratio'] = df_copy.PAST_REP / (df_copy.PAST_DEM + df_copy.PAST_REP)
+        #print(df_copy[['PAST_REP', 'PAST_DEM', 'PAST_REP_Ratio']])
         df_copy['Rep_Ratio'] = df_copy.NEW_REP / (df_copy.NEW_DEM + df_copy.NEW_REP)
         df_copy['RP_Rep'] = df_copy['Rep_Ratio'] / df_copy['PAST_REP_Ratio']
         ratio_by_strata = df_copy.groupby('STRATA').mean()['RP_Rep']
