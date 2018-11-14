@@ -19,11 +19,11 @@ class Votes:
 
     def __init__(self, df):
         # Adding column to original data frame
-        df['TOTAL_2016_VOTES'] = df['CLINTON'] + df['TRUMP']
+        df['TOTAL_2016_VOTES'] = df['PAST_DEM'] + df['PAST_REP']
         df['TOTAL_2018_VOTES'] = df['NEW_DEM'] + df['NEW_REP']
         self.df = df[df['TOTAL_2016_VOTES'] != 0]
         self.strata_lst = list(df.STRATA.unique())
-        self.df = self.df[(df.NEW_DEM.notnull()) & (df.CLINTON.notnull())]  # Valid incoming data
+        self.df = self.df[(df.NEW_DEM.notnull()) & (df.PAST_DEM.notnull())]  # Valid incoming data
 
     def democraticRatioByStrata(self):
         """
@@ -32,9 +32,9 @@ class Votes:
             A list of the ratios by strata
         """
         df_copy = self.df.copy()
-        df_copy['Clinton_Ratio'] = df_copy.CLINTON / (df_copy.CLINTON + df_copy.TRUMP)
+        df_copy['PAST_DEM_Ratio'] = df_copy.PAST_DEM / (df_copy.PAST_DEM + df_copy.PAST_REP)
         df_copy['Dem_Ratio'] = df_copy.NEW_DEM / (df_copy.NEW_DEM + df_copy.NEW_REP)
-        df_copy['RP_Dem'] = df_copy['Dem_Ratio'] / df_copy['Clinton_Ratio']
+        df_copy['RP_Dem'] = df_copy['Dem_Ratio'] / df_copy['PAST_DEM_Ratio']
         ratio_by_strata = df_copy.groupby('STRATA').mean()['RP_Dem']  # Computing average by strata
         ratio_by_strata = [el for el in ratio_by_strata if el > 0]
         return ratio_by_strata
@@ -46,21 +46,21 @@ class Votes:
              A list of the ratios by strata
         """
         df_copy = self.df.copy()
-        df_copy['Trump_Ratio'] = df_copy.TRUMP / (df_copy.CLINTON + df_copy.TRUMP)
+        df_copy['PAST_REP_Ratio'] = df_copy.PAST_REP / (df_copy.PAST_DEM + df_copy.PAST_REP)
         df_copy['Rep_Ratio'] = df_copy.NEW_REP / (df_copy.NEW_DEM + df_copy.NEW_REP)
-        df_copy['RP_Rep'] = df_copy['Rep_Ratio'] / df_copy['Trump_Ratio']
+        df_copy['RP_Rep'] = df_copy['Rep_Ratio'] / df_copy['PAST_REP_Ratio']
         ratio_by_strata = df_copy.groupby('STRATA').mean()['RP_Rep']
         ratio_by_strata = [el for el in ratio_by_strata if el > 0]
         return ratio_by_strata
 
     def corr_by_strata(self, dem=True):
         if dem:
-            corrs = self.df.groupby('STRATA')[['CLINTON', 'NEW_DEM']].corr().iloc[0::2, -1]
+            corrs = self.df.groupby('STRATA')[['PAST_DEM', 'NEW_DEM']].corr().iloc[0::2, -1]
             corrs_only = [corrs.iloc[[i]][0] for i in range(len(corrs))]
             return corrs_only
 
         else:
-            corrs = self.df.groupby('STRATA')[['TRUMP', 'NEW_REP']].corr().iloc[0::2, -1]
+            corrs = self.df.groupby('STRATA')[['PAST_REP', 'NEW_REP']].corr().iloc[0::2, -1]
             corrs_only = [corrs.iloc[[i]][0] for i in range(len(corrs))]
             return corrs_only
 

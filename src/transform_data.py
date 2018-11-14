@@ -9,8 +9,8 @@ def merge(old, new):
     """
     merged_df = pd.merge(old, new, how='outer',
                          on=(['STATE', 'COUNTY', 'PRECINCT']))[['STATE', 'COUNTY',
-                                                                'PRECINCT', 'CLINTON',
-                                                                'TRUMP', 'DEM', 'REP']]
+                                                                'PRECINCT', 'PAST_DEM',
+                                                                'PAST_REP', 'DEM', 'REP']]
     merged_df = merged_df.rename({'STATE_x': 'STATE', 'DEM': 'NEW_DEM', 'REP': 'NEW_REP'}, axis=1)
 
     # check if both are 0
@@ -27,9 +27,9 @@ def strata_maker(df, num_strata):
     Assigns Stratum 1 as the most democratic one
     Returns the dataframe with the added strata column
     """
-    df = df[df.CLINTON.notnull()]
-    df = df[df.CLINTON != 0]
-    df['DEM_RATIO'] = df.CLINTON / (df.CLINTON + df.TRUMP)
+    df = df[df.PAST_DEM.notnull()]
+    df = df[df.PAST_DEM != 0]
+    df['DEM_RATIO'] = df.PAST_DEM / (df.PAST_DEM + df.PAST_REP)
     df = df.sort_values('DEM_RATIO', ascending=True)
 
     labels = [i for i in range(1, num_strata+1)]
