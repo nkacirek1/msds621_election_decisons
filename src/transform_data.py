@@ -1,6 +1,7 @@
 from SmallVoteLib import *
 import os
 import sys
+import re
 
 
 def merge(old, new):
