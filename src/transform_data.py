@@ -68,10 +68,10 @@ def mostrecent(files):
     return files[index]
 
 
-def get_filepaths(path, alert):
+def get_old_filepaths(path, alert):
     """
     For a specified alert
-    :return: the filepaths for a given alertname
+    :return: the filepaths for a given alertname and the race
     """
     data2016 = path + 'msds621_election_decisons/data/data2016/'
     scrape_2018 = path + 'msds621_election_decisons/data/scrape_2018/'
@@ -92,6 +92,15 @@ def get_filepaths(path, alert):
     return paths
 
 
+# TODO: implement this function - grab the filepaths and
+def get_new_filepaths(path, state):
+    """
+    For a specified alert
+    :return: a list of tuples - (president_results, midterm_results, race)
+    """
+    return None
+
+
 if __name__ == '__main__':
 
     # build empty df with proper columns
@@ -107,9 +116,14 @@ if __name__ == '__main__':
 
     path_pairs = []
     for a in alerts:
-        path_pairs.extend(get_filepaths(abs_path, a))
+        path_pairs.extend(get_old_filepaths(abs_path, a))
 
     #path_pairs = get_filepaths(abs_path, 'AR_SOS')
+
+    # TODO: implement this loop
+    # grab all the states
+    # for s in states
+        # path_pairs.extend(get_new_filepaths(abs_path, s))
 
     for p in path_pairs:
         new_df_row = process_one_district(p[0], p[1], p[2], p[2][0])
