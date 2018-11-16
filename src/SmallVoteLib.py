@@ -68,7 +68,7 @@ class Votes:
 
     def wide_strata_summary(self, race, race_type):
         """
-        Build the data frame per district for ml project
+        CO the data frame per district for ml project
         """
         dem_ratios = self.democraticRatioByStrata()
         rep_ratios = self.republicanRatioByStrata()
