@@ -146,7 +146,6 @@ if __name__ == '__main__':
         path_pairs.extend(get_new_filepaths(abs_path, s))
 
     for p in path_pairs:
-        print(p)
         new_df_row = process_one_district(p[0], p[1], p[2], p[2][0], 2014)
         df = df.append(new_df_row)
 
