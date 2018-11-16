@@ -1,0 +1,200 @@
+STATE,COUNTY,PRECINCT,DEM,REP
+FL,Walton,110,111,393
+FL,Walton,120,48,292
+FL,Walton,130,119,531
+FL,Walton,210,37,165
+FL,Walton,220,38,244
+FL,Walton,230,55,428
+FL,Walton,240,32,156
+FL,Walton,310,432,1446
+FL,Walton,320,222,656
+FL,Walton,330,93,528
+FL,Walton,340,151,276
+FL,Walton,350,75,266
+FL,Walton,360,89,211
+FL,Walton,410,88,448
+FL,Walton,420,44,250
+FL,Walton,430,359,1369
+FL,Walton,440,51,269
+FL,Walton,510,613,2939
+FL,Walton,520,694,2164
+FL,Walton,530,435,1039
+FL,Walton,540,140,594
+FL,Escambia,1,427,1063
+FL,Escambia,3,529,1063
+FL,Escambia,5,320,1324
+FL,Escambia,6,187,598
+FL,Escambia,7,447,2109
+FL,Escambia,11,82,451
+FL,Escambia,14,763,227
+FL,Escambia,15,299,966
+FL,Escambia,18,42,258
+FL,Escambia,19,324,1519
+FL,Escambia,21,386,818
+FL,Escambia,22,209,187
+FL,Escambia,23,38,340
+FL,Escambia,24,460,1163
+FL,Escambia,25,211,497
+FL,Escambia,26,725,2034
+FL,Escambia,28,994,172
+FL,Escambia,29,386,281
+FL,Escambia,30,312,1033
+FL,Escambia,31,547,304
+FL,Escambia,32,82,154
+FL,Escambia,33,56,523
+FL,Escambia,34,611,271
+FL,Escambia,35,308,747
+FL,Escambia,36,309,1056
+FL,Escambia,38,392,1550
+FL,Escambia,40,284,590
+FL,Escambia,41,559,573
+FL,Escambia,42,430,1275
+FL,Escambia,43,484,2415
+FL,Escambia,46,340,1209
+FL,Escambia,47,274,206
+FL,Escambia,48,504,113
+FL,Escambia,49,311,430
+FL,Escambia,50,137,140
+FL,Escambia,51,491,1046
+FL,Escambia,54,292,807
+FL,Escambia,55,243,695
+FL,Escambia,56,444,296
+FL,Escambia,58,124,504
+FL,Escambia,60,342,102
+FL,Escambia,61,320,645
+FL,Escambia,62,502,890
+FL,Escambia,63,489,54
+FL,Escambia,64,422,767
+FL,Escambia,67,499,1936
+FL,Escambia,68,289,790
+FL,Escambia,69,766,932
+FL,Escambia,70,565,652
+FL,Escambia,71,331,432
+FL,Escambia,72,152,321
+FL,Escambia,73,365,1132
+FL,Escambia,74,470,2203
+FL,Escambia,75,494,1134
+FL,Escambia,77,295,351
+FL,Escambia,80,109,362
+FL,Escambia,82,184,138
+FL,Escambia,83,327,704
+FL,Escambia,86,470,854
+FL,Escambia,88,264,536
+FL,Escambia,90,489,149
+FL,Escambia,91,648,1648
+FL,Escambia,94,352,1077
+FL,Escambia,95,203,705
+FL,Escambia,97,268,723
+FL,Escambia,98,1224,358
+FL,Escambia,99,181,488
+FL,Escambia,101,229,609
+FL,Escambia,102,367,791
+FL,Escambia,103,571,345
+FL,Escambia,104,482,358
+FL,Escambia,105,402,1645
+FL,Escambia,106,309,577
+FL,Escambia,107,651,1460
+FL,Escambia,108,551,1180
+FL,Escambia,110,56,869
+FL,Escambia,111,380,1060
+FL,Escambia,112,724,2285
+FL,Escambia,113,237,413
+FL,Okaloosa,1,133,997
+FL,Okaloosa,2,32,328
+FL,Okaloosa,3,92,482
+FL,Okaloosa,4,85,509
+FL,Okaloosa,5,100,400
+FL,Okaloosa,6,217,1119
+FL,Okaloosa,7,123,549
+FL,Okaloosa,8,317,1419
+FL,Okaloosa,9,297,1345
+FL,Okaloosa,10,546,1697
+FL,Okaloosa,11,502,1518
+FL,Okaloosa,12,214,90
+FL,Okaloosa,13,290,1299
+FL,Okaloosa,14,226,864
+FL,Okaloosa,15,245,1046
+FL,Okaloosa,16,280,961
+FL,Okaloosa,17,268,884
+FL,Okaloosa,18,269,761
+FL,Okaloosa,19,194,354
+FL,Okaloosa,20,187,866
+FL,Okaloosa,21,257,959
+FL,Okaloosa,22,246,595
+FL,Okaloosa,23,18,60
+FL,Okaloosa,24,309,895
+FL,Okaloosa,25,123,613
+FL,Okaloosa,26,169,1070
+FL,Okaloosa,27,26,99
+FL,Okaloosa,28,34,132
+FL,Okaloosa,29,172,900
+FL,Okaloosa,30,128,495
+FL,Okaloosa,31,160,857
+FL,Okaloosa,32,261,947
+FL,Okaloosa,33,305,2011
+FL,Okaloosa,34,293,978
+FL,Okaloosa,35,203,1148
+FL,Okaloosa,36,199,1019
+FL,Okaloosa,37,254,1315
+FL,Okaloosa,38,227,764
+FL,Okaloosa,39,250,795
+FL,Okaloosa,40,221,1368
+FL,Okaloosa,41,123,562
+FL,Okaloosa,42,288,580
+FL,Okaloosa,43,197,782
+FL,Okaloosa,44,144,565
+FL,Okaloosa,45,415,1240
+FL,Okaloosa,46,331,1699
+FL,Okaloosa,47,124,425
+FL,Okaloosa,48,18,87
+FL,Okaloosa,49,205,1217
+FL,Okaloosa,50,237,1223
+FL,Okaloosa,51,102,734
+FL,Okaloosa,52,309,1223
+FL,Santa Rosa,1,205,460
+FL,Santa Rosa,2,184,1352
+FL,Santa Rosa,3,18,352
+FL,Santa Rosa,4,73,691
+FL,Santa Rosa,5,5,48
+FL,Santa Rosa,6,11,61
+FL,Santa Rosa,7,32,117
+FL,Santa Rosa,8,169,475
+FL,Santa Rosa,9,221,926
+FL,Santa Rosa,10,92,430
+FL,Santa Rosa,11,101,431
+FL,Santa Rosa,12,341,1102
+FL,Santa Rosa,13,84,619
+FL,Santa Rosa,14,83,258
+FL,Santa Rosa,15,329,1058
+FL,Santa Rosa,16,301,1011
+FL,Santa Rosa,17,48,367
+FL,Santa Rosa,18,303,1617
+FL,Santa Rosa,19,74,549
+FL,Santa Rosa,20,347,1956
+FL,Santa Rosa,21,296,1372
+FL,Santa Rosa,22,583,1981
+FL,Santa Rosa,23,265,860
+FL,Santa Rosa,24,425,2350
+FL,Santa Rosa,25,349,1304
+FL,Santa Rosa,26,502,2001
+FL,Santa Rosa,27,303,1826
+FL,Santa Rosa,28,259,1219
+FL,Santa Rosa,29,150,746
+FL,Santa Rosa,30,243,1363
+FL,Santa Rosa,31,95,558
+FL,Santa Rosa,32,357,1308
+FL,Santa Rosa,33,217,899
+FL,Santa Rosa,34,757,2990
+FL,Santa Rosa,35,394,1397
+FL,Santa Rosa,36,158,854
+FL,Santa Rosa,37,185,760
+FL,Santa Rosa,38,107,352
+FL,Santa Rosa,39,158,690
+FL,Santa Rosa,40,124,473
+FL,Santa Rosa,41,217,846
+FL,Holmes,1,100,435
+FL,Holmes,2,85,500
+FL,Holmes,3,94,400
+FL,Holmes,4,124,656
+FL,Holmes,5,52,196
+FL,Holmes,6,123,679

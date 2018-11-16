@@ -1,0 +1,217 @@
+STATE,COUNTY,PRECINCT,DEM,REP
+FL,Indian River,1,3,20
+FL,Indian River,2,125,118
+FL,Indian River,3,129,357
+FL,Indian River,4,1,14
+FL,Indian River,5,549,1081
+FL,Indian River,6,299,536
+FL,Indian River,7,297,683
+FL,Indian River,8,705,1351
+FL,Indian River,9,924,1827
+FL,Indian River,10,1010,1894
+FL,Indian River,11,230,477
+FL,Indian River,12,137,363
+FL,Indian River,13,692,2208
+FL,Indian River,14,381,1121
+FL,Indian River,15,32,309
+FL,Indian River,16,421,2086
+FL,Indian River,17,685,1931
+FL,Indian River,18,363,1672
+FL,Indian River,19,328,696
+FL,Indian River,20,71,206
+FL,Indian River,21,893,248
+FL,Indian River,22,456,1239
+FL,Indian River,23,383,669
+FL,Indian River,24,126,194
+FL,Indian River,25,250,655
+FL,Indian River,26,329,466
+FL,Indian River,27,651,1404
+FL,Indian River,28,908,1811
+FL,Indian River,29,958,1636
+FL,Indian River,30,478,1089
+FL,Indian River,31,491,1320
+FL,Indian River,32,875,2187
+FL,Indian River,33,335,1014
+FL,Indian River,34,481,1059
+FL,Indian River,35,498,1155
+FL,Indian River,36,259,609
+FL,Indian River,37,26,63
+FL,Orange,405,11,48
+FL,Orange,416,9,0
+FL,Orange,434,2,13
+FL,Orange,543,352,710
+FL,Orange,544,939,1441
+FL,Orange,545,200,574
+FL,Brevard,100,337,730
+FL,Brevard,101,276,460
+FL,Brevard,102,145,402
+FL,Brevard,103,600,1514
+FL,Brevard,104,729,1702
+FL,Brevard,105,606,1019
+FL,Brevard,106,291,1035
+FL,Brevard,107,390,824
+FL,Brevard,108,826,506
+FL,Brevard,109,552,879
+FL,Brevard,110,426,991
+FL,Brevard,111,493,846
+FL,Brevard,112,467,1177
+FL,Brevard,113,541,1047
+FL,Brevard,114,874,1618
+FL,Brevard,115,644,1292
+FL,Brevard,116,630,1958
+FL,Brevard,117,501,797
+FL,Brevard,118,808,1895
+FL,Brevard,119,251,506
+FL,Brevard,120,505,82
+FL,Brevard,121,318,1048
+FL,Brevard,122,381,715
+FL,Brevard,123,593,1038
+FL,Brevard,124,689,1218
+FL,Brevard,125,669,1340
+FL,Brevard,126,0,0
+FL,Brevard,127,190,331
+FL,Brevard,128,0,2
+FL,Brevard,129,1,2
+FL,Brevard,130,0,0
+FL,Brevard,131,228,388
+FL,Brevard,132,0,0
+FL,Brevard,133,0,0
+FL,Brevard,134,0,0
+FL,Brevard,135,87,204
+FL,Brevard,136,0,0
+FL,Brevard,137,0,0
+FL,Brevard,138,0,0
+FL,Brevard,200,370,769
+FL,Brevard,201,626,2171
+FL,Brevard,202,500,1139
+FL,Brevard,203,710,1341
+FL,Brevard,204,897,1486
+FL,Brevard,205,990,2936
+FL,Brevard,206,476,999
+FL,Brevard,207,195,325
+FL,Brevard,208,429,748
+FL,Brevard,209,347,470
+FL,Brevard,210,205,298
+FL,Brevard,211,636,1189
+FL,Brevard,212,420,417
+FL,Brevard,213,185,129
+FL,Brevard,214,509,621
+FL,Brevard,215,285,566
+FL,Brevard,216,1119,2409
+FL,Brevard,217,599,1554
+FL,Brevard,218,113,227
+FL,Brevard,219,984,1318
+FL,Brevard,220,124,257
+FL,Brevard,221,598,1219
+FL,Brevard,222,708,1345
+FL,Brevard,223,81,163
+FL,Brevard,224,951,1723
+FL,Brevard,225,1,1
+FL,Brevard,226,605,1012
+FL,Brevard,227,43,72
+FL,Brevard,228,177,391
+FL,Brevard,229,70,268
+FL,Brevard,230,2,3
+FL,Brevard,231,235,141
+FL,Brevard,232,232,538
+FL,Brevard,233,256,51
+FL,Brevard,234,54,111
+FL,Brevard,235,412,933
+FL,Brevard,236,145,252
+FL,Brevard,237,13,19
+FL,Brevard,238,4,27
+FL,Brevard,300,650,451
+FL,Brevard,301,382,968
+FL,Brevard,302,528,1466
+FL,Brevard,303,1326,1799
+FL,Brevard,304,884,1697
+FL,Brevard,305,651,1013
+FL,Brevard,306,453,171
+FL,Brevard,307,237,578
+FL,Brevard,308,683,1127
+FL,Brevard,309,1653,3293
+FL,Brevard,310,501,930
+FL,Brevard,311,587,1095
+FL,Brevard,312,466,857
+FL,Brevard,313,1450,1924
+FL,Brevard,314,686,1034
+FL,Brevard,315,950,1053
+FL,Brevard,316,760,881
+FL,Brevard,317,1008,1495
+FL,Brevard,318,629,1309
+FL,Brevard,319,0,3
+FL,Brevard,320,17,40
+FL,Brevard,321,72,89
+FL,Brevard,322,1061,1135
+FL,Brevard,323,76,89
+FL,Brevard,324,154,298
+FL,Brevard,400,890,1344
+FL,Brevard,401,732,1733
+FL,Brevard,402,732,1369
+FL,Brevard,403,243,415
+FL,Brevard,404,1133,2336
+FL,Brevard,405,1020,2087
+FL,Brevard,406,964,2332
+FL,Brevard,407,75,156
+FL,Brevard,408,297,417
+FL,Brevard,409,425,707
+FL,Brevard,410,141,278
+FL,Brevard,411,209,353
+FL,Brevard,412,188,493
+FL,Brevard,413,46,188
+FL,Brevard,414,860,1439
+FL,Brevard,415,543,1197
+FL,Brevard,416,226,634
+FL,Brevard,417,788,1691
+FL,Brevard,418,407,1112
+FL,Brevard,419,132,436
+FL,Brevard,420,569,1284
+FL,Brevard,421,647,1897
+FL,Brevard,422,828,2015
+FL,Brevard,423,295,744
+FL,Brevard,424,484,1114
+FL,Brevard,425,150,321
+FL,Brevard,426,250,901
+FL,Brevard,427,716,1874
+FL,Brevard,428,891,2019
+FL,Brevard,429,448,1036
+FL,Brevard,430,154,506
+FL,Brevard,431,259,622
+FL,Brevard,432,20,56
+FL,Brevard,433,8,14
+FL,Brevard,434,1,1
+FL,Brevard,435,12,29
+FL,Brevard,436,0,0
+FL,Brevard,437,103,179
+FL,Brevard,500,342,545
+FL,Brevard,501,162,239
+FL,Brevard,502,608,960
+FL,Brevard,503,580,1248
+FL,Brevard,504,167,289
+FL,Brevard,505,623,1486
+FL,Brevard,506,528,958
+FL,Brevard,507,591,1182
+FL,Brevard,508,376,795
+FL,Brevard,509,190,219
+FL,Brevard,510,1655,2507
+FL,Brevard,511,439,1154
+FL,Brevard,512,466,1254
+FL,Brevard,513,133,223
+FL,Brevard,514,164,249
+FL,Brevard,515,530,1270
+FL,Brevard,516,1222,1306
+FL,Brevard,517,1201,1422
+FL,Brevard,518,608,1185
+FL,Brevard,519,1293,1405
+FL,Brevard,520,883,1125
+FL,Brevard,521,936,1217
+FL,Brevard,522,88,144
+FL,Brevard,523,180,294
+FL,Brevard,524,2,3
+FL,Brevard,525,84,190
+FL,Brevard,526,0,0
+FL,Brevard,527,439,561
+FL,Brevard,528,239,258
+FL,Brevard,529,324,536
+FL,Brevard,530,182,351
+FL,Brevard,999,93,271
