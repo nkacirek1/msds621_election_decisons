@@ -107,7 +107,7 @@ def get_new_filepaths(path, state):
     for d in os.listdir(data_path + state + '/Presidential'):
         pres_path = os.path.abspath(data_path+ state + '/Presidential/' + d)
         race, year = re.split('[._]', d)[0:2]
-        midt_race = race + '_' + str(int(year) + 2) + '.csv'
+        midt_race = race + '_2014.csv'
         midt_path = os.path.abspath(data_path+ state + '/Midterm/' + midt_race)
         paths.append((pres_path, midt_path, race))
 
