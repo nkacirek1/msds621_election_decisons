@@ -73,8 +73,8 @@ def get_old_filepaths(path, alert):
     For a specified alert
     :return: the filepaths for a given alertname and the race
     """
-    data2016 = path + 'msds621_election_decisons/data/data2016/'
-    scrape_2018 = path + 'msds621_election_decisons/data/scrape_2018/'
+    data2016 = path + 'msds621_election_decisons/data/efs/data2016/'
+    scrape_2018 = path + 'msds621_election_decisons/data/efs/scrape_2018/'
 
     paths = []
 
@@ -98,7 +98,7 @@ def get_new_filepaths(path, state):
     For a specified alert
     :return: a list of tuples - (president_results, midterm_results, race)
     """
-    return None
+    return []
 
 
 if __name__ == '__main__':
@@ -112,18 +112,19 @@ if __name__ == '__main__':
 
     abs_path = sys.argv[1]  # /Users/nicolekacirek/Desktop/USF/Fall_Module_2/Machine_Learning/
 
-    alerts = [d for d in os.listdir(abs_path + 'msds621_election_decisons/data/data2016/') if not d.startswith('.')]
+    alerts = [d for d in os.listdir(abs_path + 'msds621_election_decisons/data/efs/data2016/') if not d.startswith('.')]
 
     path_pairs = []
     for a in alerts:
         path_pairs.extend(get_old_filepaths(abs_path, a))
 
-    #path_pairs = get_filepaths(abs_path, 'AR_SOS')
+    # repeat for the new states data
+    ignore = ['efs', 'Build', 'final.csv']
+    states = [d for d in os.listdir(abs_path + 'msds621_election_decisons/data/')
+              if not d.startswith('.') and d not in ignore]
 
-    # TODO: implement this loop
-    # grab all the states
-    # for s in states
-        # path_pairs.extend(get_new_filepaths(abs_path, s))
+    for s in states:
+        path_pairs.extend(get_new_filepaths(abs_path, s))
 
     for p in path_pairs:
         new_df_row = process_one_district(p[0], p[1], p[2], p[2][0])
