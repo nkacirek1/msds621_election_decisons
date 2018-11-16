@@ -1,6 +1,7 @@
 from SmallVoteLib import *
 import os
 import sys
+import re
 
 
 def merge(old, new):
@@ -137,9 +138,11 @@ if __name__ == '__main__':
     for s in states:
         path_pairs.extend(get_new_filepaths(abs_path, s))
 
-    for p in path_pairs:
-        new_df_row = process_one_district(p[0], p[1], p[2], p[2][0])
-        df = df.append(new_df_row)
+    print(path_pairs[-2:])
 
-    df.to_csv(abs_path + 'msds621_election_decisons/data/final.csv', index=False)
+    # for p in path_pairs:
+    #     new_df_row = process_one_district(p[0], p[1], p[2], p[2][0])
+    #     df = df.append(new_df_row)
+    #
+    # df.to_csv(abs_path + 'msds621_election_decisons/data/final.csv', index=False)
 
