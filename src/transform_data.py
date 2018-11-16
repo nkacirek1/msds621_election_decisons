@@ -39,7 +39,7 @@ def strata_maker(df, num_strata):
     return df
 
 
-def process_one_district(old_file, new_file, race, racetype):
+def process_one_district(old_file, new_file, race, racetype, midterm_year):
     """
     :param old_file: filename of older vote totals (earlier year)
     :param new_file: filename of new vote totals (later year)
@@ -53,7 +53,7 @@ def process_one_district(old_file, new_file, race, racetype):
     combined = merge(old_df, new_df)  # merge
     with_strata = strata_maker(combined, 3)  # add strata
 
-    votes_obj = Votes(with_strata)  # create the vote object
+    votes_obj = Votes(with_strata, midterm_year)  # create the vote object
 
     return votes_obj.wide_strata_summary(race, racetype)  # will give a row per district
 
@@ -113,6 +113,7 @@ def get_new_filepaths(path, state):
 
     return paths
 
+
 if __name__ == '__main__':
 
     # build empty df with proper columns
@@ -130,19 +131,23 @@ if __name__ == '__main__':
     for a in alerts:
         path_pairs.extend(get_old_filepaths(abs_path, a))
 
+    for p in path_pairs:
+        new_df_row = process_one_district(p[0], p[1], p[2], p[2][0], 2018)
+        df = df.append(new_df_row)
+
     # repeat for the new states data
     ignore = ['efs', 'Build', 'final.csv']
     states = [d for d in os.listdir(abs_path + 'msds621_election_decisons/data/')
               if not d.startswith('.') and d not in ignore]
 
+    path_pairs = []
     for s in states:
         path_pairs.extend(get_new_filepaths(abs_path, s))
 
-    print(path_pairs[-2:])
+    for p in path_pairs:
+        print(p)
+        new_df_row = process_one_district(p[0], p[1], p[2], p[2][0], 2014)
+        df = df.append(new_df_row)
 
-    # for p in path_pairs:
-    #     new_df_row = process_one_district(p[0], p[1], p[2], p[2][0])
-    #     df = df.append(new_df_row)
-    #
-    # df.to_csv(abs_path + 'msds621_election_decisons/data/final.csv', index=False)
+    df.to_csv(abs_path + 'msds621_election_decisons/data/final.csv', index=False)
 

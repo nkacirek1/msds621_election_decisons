@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-from winners import won
+from winners import *
 import pandas as pd
 import numpy as np
 
@@ -17,13 +17,13 @@ class Votes:
     of methods, which are concerned with prediction and printing of these statistics and predictions
     """
 
-    def __init__(self, df):
+    def __init__(self, df, midterm_year):
         # Adding column to original data frame
         df['TOTAL_2016_VOTES'] = df['PAST_DEM'] + df['PAST_REP']
-        df['TOTAL_2018_VOTES'] = df['NEW_DEM'] + df['NEW_REP']
         self.df = df[df['TOTAL_2016_VOTES'] != 0]
         self.strata_lst = list(df.STRATA.unique())
         self.df = self.df[(df.NEW_DEM.notnull()) & (df.PAST_DEM.notnull())]  # Valid incoming data
+        self.midterm_year = midterm_year
 
     def democraticRatioByStrata(self):
         """
@@ -32,6 +32,7 @@ class Votes:
             A list of the ratios by strata
         """
         df_copy = self.df.copy()
+        df_copy.loc[df_copy.PAST_REP == 0.0, 'PAST_REP'] = 1.0
         df_copy['PAST_DEM_Ratio'] = df_copy.PAST_DEM / (df_copy.PAST_DEM + df_copy.PAST_REP)
         df_copy['Dem_Ratio'] = df_copy.NEW_DEM / (df_copy.NEW_DEM + df_copy.NEW_REP)
         df_copy['RP_Dem'] = df_copy['Dem_Ratio'] / df_copy['PAST_DEM_Ratio']
@@ -75,6 +76,7 @@ class Votes:
         dd_cor = self.corr_by_strata()
         rr_cor = self.corr_by_strata(dem=False)
         race = self.df['STATE'].unique()[0] + '_' + race
+        won = won_2018[race] if self.midterm_year == 2018 else won_2014[race]
 
         strata_tbl = pd.DataFrame({
             'STATE': self.df['STATE'].unique()[0],
@@ -91,7 +93,7 @@ class Votes:
             'S1_COR(RR)': rr_cor[0],
             'S2_COR(RR)': rr_cor[1],
             'S3_COR(RR)': rr_cor[2],
-            'WINNER': won[race]
+            'WINNER': won
         }, index=[0])
 
         return strata_tbl
