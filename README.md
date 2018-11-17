@@ -11,7 +11,7 @@ Master of Science Data Science
 * [Sarah Melancon](https://github.com/smelancon)
 
 ## Research Question
-Can we use presidential election data to predict midterm election results? Specifically can we classify a race as Democrat or Republican
+Can we use presidential election data to predict midterm election results? Specifically, can we classify a race as win for the Democratic or Republican candiadate?
 
 ## Data
 We built our data set from ground up, collecting 2012-2014 / 2016-2018 precinct level election results from a variarty of Secretary of State websites. We then worked with domain experts to create useful features. 
