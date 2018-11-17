@@ -1,4 +1,4 @@
-# Election Night Classification
+# Midterm Election Classification
 * Checkout of the most recent model run [here](final_project_checkin_template.ipynb). 
 
 Final Project for MSDS621 - Intro to Machine Learning<br>
