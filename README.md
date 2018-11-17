@@ -1,9 +1,14 @@
-# msds621_election_decisons
+# Election Decisions
 * Checkout of the most recent model run [here](final_project_checkin_template.ipynb). 
 
 Final Project for MSDS621 - Intro to Machine Learning<br>
 Univeristy of San Francisco <br>
 Master of Science Data Science
+
+## Contributors
+* [Nicole Kacirek](https://github.com/nkacirek1)
+* [Lance Fernando](https://github.com/Ljfernando)
+* [Sarah Melancon](https://github.com/smelancon)
 
 ## Research Question
 Can we use presidential election data to predict midterm election results? Specifically can we classify a race as Democrat or Republican
