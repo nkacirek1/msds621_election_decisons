@@ -1,5 +1,5 @@
 # msds621_election_decisons
-* Checkout of the most recent project version [here](final_project_checkin_template.ipynb). 
+* Checkout of the most recent model run [here](final_project_checkin_template.ipynb). 
 
 Final Project for MSDS621 - Intro to Machine Learning<br>
 Univeristy of San Francisco <br>
