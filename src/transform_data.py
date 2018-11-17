@@ -124,7 +124,7 @@ if __name__ == '__main__':
                'WINNER']
     df = pd.DataFrame(columns=columns)
 
-    abs_path = sys.argv[1]  # /Users/nicolekacirek/Desktop/USF/Fall_Module_2/Machine_Learning/
+    abs_path = sys.argv[1]  # absolute path to dir containing the repo
 
     alerts = [d for d in os.listdir(abs_path + 'msds621_election_decisons/data/efs/data2016/') if not d.startswith('.')]
 
