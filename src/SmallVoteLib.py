@@ -21,9 +21,29 @@ class Votes:
         # Adding column to original data frame
         df['TOTAL_2016_VOTES'] = df['PAST_DEM'] + df['PAST_REP']
         self.df = df[df['TOTAL_2016_VOTES'] != 0]
-        self.strata_lst = list(df.STRATA.unique())
         self.df = self.df[(df.NEW_DEM.notnull()) & (df.PAST_DEM.notnull())]  # Valid incoming data
         self.midterm_year = midterm_year
+        self.df = self.strata_maker(self.df, 6)  # add strata
+        self.strata_lst = list(self.df.STRATA.unique())
+        print(self.df.STATE.unique(), self.df.STRATA.unique())
+
+    def strata_maker(self, df, num_strata):
+        """
+        Orders the precincts by dem_ratio and partitions into NUM_STRATA equal groups
+        Assigns Stratum 1 as the most democratic one
+        Returns the dataframe with the added strata column
+        """
+        df = df[df.PAST_DEM.notnull()]
+        df = df[df.PAST_DEM != 0]
+        df['DEM_RATIO'] = df.PAST_DEM / (df.PAST_DEM + df.PAST_REP)
+        df = df.sort_values('DEM_RATIO', ascending=True)
+
+        labels = [i for i in range(1, num_strata + 1)]
+        # Produce labels for the strata names
+        df['STRATA'] = pd.qcut(df['DEM_RATIO'], num_strata, labels=labels).astype(str)
+        # print(df.STATE.unique(), df.STRATA.unique())
+        return df
+
 
     def democraticRatioByStrata(self):
         """
@@ -37,8 +57,13 @@ class Votes:
         df_copy['Dem_Ratio'] = df_copy.NEW_DEM / (df_copy.NEW_DEM + df_copy.NEW_REP)
         df_copy['RP_Dem'] = df_copy['Dem_Ratio'] / df_copy['PAST_DEM_Ratio']
         ratio_by_strata = df_copy.groupby('STRATA').mean()['RP_Dem']  # Computing average by strata
-        ratio_by_strata = [el for el in ratio_by_strata if el > 0]
-        return ratio_by_strata
+        ratio_by_strata_final = [el for el in ratio_by_strata if el > 0]
+        if len(ratio_by_strata) < 6:
+            print(df_copy)
+            print(df_copy.STRATA.unique())
+            print(ratio_by_strata)
+            print(ratio_by_strata_final)
+        return ratio_by_strata_final
 
     def republicanRatioByStrata(self):
         """
@@ -84,15 +109,27 @@ class Votes:
             'S1_DEM_RATIO': dem_ratios[0],
             'S2_DEM_RATIO': dem_ratios[1],
             'S3_DEM_RATIO': dem_ratios[2],
+            'S4_DEM_RATIO': dem_ratios[3],
+            'S5_DEM_RATIO': dem_ratios[4],
+            'S6_DEM_RATIO': dem_ratios[5],
             'S1_REP_RATIO': rep_ratios[0],
             'S2_REP_RATIO': rep_ratios[1],
             'S3_REP_RATIO': rep_ratios[2],
+            'S4_REP_RATIO': rep_ratios[3],
+            'S5_REP_RATIO': rep_ratios[4],
+            'S6_REP_RATIO': rep_ratios[5],
             'S1_COR(DD)': dd_cor[0],
             'S2_COR(DD)': dd_cor[1],
             'S3_COR(DD)': dd_cor[2],
+            'S4_COR(DD)': dd_cor[3],
+            'S5_COR(DD)': dd_cor[4],
+            'S6_COR(DD)': dd_cor[5],
             'S1_COR(RR)': rr_cor[0],
             'S2_COR(RR)': rr_cor[1],
             'S3_COR(RR)': rr_cor[2],
+            'S4_COR(RR)': rr_cor[3],
+            'S5_COR(RR)': rr_cor[4],
+            'S6_COR(RR)': rr_cor[5],
             'WINNER': won
         }, index=[0])
 

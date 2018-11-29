@@ -22,23 +22,6 @@ def merge(old, new):
     return merged_df
 
 
-def strata_maker(df, num_strata):
-    """
-    Orders the precincts by dem_ratio and partitions into NUM_STRATA equal groups
-    Assigns Stratum 1 as the most democratic one
-    Returns the dataframe with the added strata column
-    """
-    df = df[df.PAST_DEM.notnull()]
-    df = df[df.PAST_DEM != 0]
-    df['DEM_RATIO'] = df.PAST_DEM / (df.PAST_DEM + df.PAST_REP)
-    df = df.sort_values('DEM_RATIO', ascending=True)
-
-    labels = [i for i in range(1, num_strata+1)]
-    # Produce labels for the strata names
-    df['STRATA'] = pd.qcut(df['DEM_RATIO'], num_strata, labels=labels).astype(str)
-    return df
-
-
 def process_one_district(old_file, new_file, race, racetype, midterm_year):
     """
     :param old_file: filename of older vote totals (earlier year)
@@ -51,9 +34,8 @@ def process_one_district(old_file, new_file, race, racetype, midterm_year):
     new_df = pd.read_csv(new_file, dtype={'COUNTY': str, 'PRECINCT': str})
 
     combined = merge(old_df, new_df)  # merge
-    with_strata = strata_maker(combined, 3)  # add strata
 
-    votes_obj = Votes(with_strata, midterm_year)  # create the vote object
+    votes_obj = Votes(combined, midterm_year)  # create the vote object
 
     return votes_obj.wide_strata_summary(race, racetype)  # will give a row per district
 
@@ -118,9 +100,13 @@ def get_new_filepaths(path, state):
 if __name__ == '__main__':
 
     # build empty df with proper columns
-    columns = ['STATE', 'RACE', 'S1_DEM_RATIO', 'S2_DEM_RATIO', 'S3_DEM_RATIO',
-               'S1_REP_RATIO', 'S2_REP_RATIO', 'S3_REP_RATIO', 'S1_COR(DD)',
-               'S2_COR(DD)', 'S3_COR(DD)', 'S1_COR(RR)', 'S2_COR(RR)', 'S3_COR(RR)',
+    columns = ['STATE', 'RACE',
+               'S1_DEM_RATIO', 'S2_DEM_RATIO', 'S3_DEM_RATIO',
+               'S4_DEM_RATIO', 'S5_DEM_RATIO', 'S6_DEM_RATIO',
+               'S1_REP_RATIO', 'S2_REP_RATIO', 'S3_REP_RATIO',
+               'S4_REP_RATIO', 'S5_REP_RATIO', 'S6_REP_RATIO',
+               'S1_COR(DD)', 'S2_COR(DD)', 'S3_COR(DD)', 'S4_COR(DD)', 'S5_COR(DD)', 'S6_COR(DD)',
+               'S1_COR(RR)', 'S2_COR(RR)', 'S3_COR(RR)', 'S4_COR(RR)', 'S5_COR(RR)', 'S6_COR(RR)',
                'WINNER']
     df = pd.DataFrame(columns=columns)
 
@@ -149,5 +135,5 @@ if __name__ == '__main__':
         new_df_row = process_one_district(p[0], p[1], p[2], p[2][0], 2014)
         df = df.append(new_df_row)
 
-    df.to_csv(abs_path + 'msds621_election_decisons/data/final.csv', index=False)
+    df.to_csv(abs_path + 'msds621_election_decisons/data/full_final.csv', index=False)
 
