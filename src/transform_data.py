@@ -105,9 +105,11 @@ if __name__ == '__main__':
                'S4_DEM_RATIO', 'S5_DEM_RATIO', 'S6_DEM_RATIO',
                'S1_REP_RATIO', 'S2_REP_RATIO', 'S3_REP_RATIO',
                'S4_REP_RATIO', 'S5_REP_RATIO', 'S6_REP_RATIO',
-               'S1_COR(DD)', 'S2_COR(DD)', 'S3_COR(DD)', 'S4_COR(DD)', 'S5_COR(DD)', 'S6_COR(DD)',
-               'S1_COR(RR)', 'S2_COR(RR)', 'S3_COR(RR)', 'S4_COR(RR)', 'S5_COR(RR)', 'S6_COR(RR)',
-               'WINNER']
+               'S1_COR(DD)', 'S2_COR(DD)', 'S3_COR(DD)',
+               'S4_COR(DD)', 'S5_COR(DD)', 'S6_COR(DD)',
+               'S1_COR(RR)', 'S2_COR(RR)', 'S3_COR(RR)',
+               'S4_COR(RR)', 'S5_COR(RR)', 'S6_COR(RR)',
+               'TIGHT_RACE', 'WINNER']
     df = pd.DataFrame(columns=columns)
 
     abs_path = sys.argv[1]  # absolute path to dir containing the repo
@@ -123,7 +125,7 @@ if __name__ == '__main__':
         df = df.append(new_df_row)
 
     # repeat for the new states data
-    ignore = ['efs', 'Build', 'final.csv']
+    ignore = ['efs', 'Build', 'final.csv', 'full_final.csv']
     states = [d for d in os.listdir(abs_path + 'msds621_election_decisons/data/')
               if not d.startswith('.') and d not in ignore]
 

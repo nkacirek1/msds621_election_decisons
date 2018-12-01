@@ -25,7 +25,6 @@ class Votes:
         self.midterm_year = midterm_year
         self.df = self.strata_maker(self.df, 6)  # add strata
         self.strata_lst = list(self.df.STRATA.unique())
-        print(self.df.STATE.unique(), self.df.STRATA.unique())
 
     def strata_maker(self, df, num_strata):
         """
@@ -41,9 +40,7 @@ class Votes:
         labels = [i for i in range(1, num_strata + 1)]
         # Produce labels for the strata names
         df['STRATA'] = pd.qcut(df['DEM_RATIO'], num_strata, labels=labels).astype(str)
-        # print(df.STATE.unique(), df.STRATA.unique())
         return df
-
 
     def democraticRatioByStrata(self):
         """
@@ -74,7 +71,6 @@ class Votes:
         df_copy = self.df.copy()
         df_copy.loc[df_copy.PAST_REP == 0.0, 'PAST_REP'] = 1.0
         df_copy['PAST_REP_Ratio'] = df_copy.PAST_REP / (df_copy.PAST_DEM + df_copy.PAST_REP)
-        #print(df_copy[['PAST_REP', 'PAST_DEM', 'PAST_REP_Ratio']])
         df_copy['Rep_Ratio'] = df_copy.NEW_REP / (df_copy.NEW_DEM + df_copy.NEW_REP)
         df_copy['RP_Rep'] = df_copy['Rep_Ratio'] / df_copy['PAST_REP_Ratio']
         ratio_by_strata = df_copy.groupby('STRATA').mean()['RP_Rep']
@@ -92,6 +88,21 @@ class Votes:
             corrs_only = [corrs.iloc[[i]][0] for i in range(len(corrs))]
             return corrs_only
 
+    def tight_race(self):
+        """
+        A race is considered to be "tight" if the difference between the 2018 Dem/Rep
+        vote totals is < 10% of the total votes
+        :return: True/False
+        """
+        df_copy = self.df.copy()
+        df_copy['TOTAL_2018_VOTES'] = df_copy.NEW_DEM + df_copy.NEW_REP
+
+        percent_diff = abs(df_copy.NEW_DEM.sum() - df_copy.NEW_REP.sum()) / df_copy.TOTAL_2018_VOTES.sum()
+        if percent_diff < 0.1:
+            return True
+        else:
+            return False
+
     def wide_strata_summary(self, race, race_type):
         """
         CO the data frame per district for ml project
@@ -100,6 +111,7 @@ class Votes:
         rep_ratios = self.republicanRatioByStrata()
         dd_cor = self.corr_by_strata()
         rr_cor = self.corr_by_strata(dem=False)
+        print(len(dem_ratios), len(rep_ratios), len(dd_cor), len(rr_cor))
         race = self.df['STATE'].unique()[0] + '_' + race
         won = won_2018[race] if self.midterm_year == 2018 else won_2014[race]
 
@@ -130,6 +142,7 @@ class Votes:
             'S4_COR(RR)': rr_cor[3],
             'S5_COR(RR)': rr_cor[4],
             'S6_COR(RR)': rr_cor[5],
+            'TIGHT_RACE': self.tight_race(),
             'WINNER': won
         }, index=[0])
 
