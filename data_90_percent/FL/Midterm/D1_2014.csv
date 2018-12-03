@@ -1,0 +1,200 @@
+,STATE,COUNTY,PRECINCT,DEM,REP
+0,FL,Walton,110,111,393
+1,FL,Walton,120,48,292
+2,FL,Walton,130,119,531
+3,FL,Walton,210,37,165
+4,FL,Walton,220,38,244
+5,FL,Walton,230,55,428
+6,FL,Walton,240,0,0
+7,FL,Walton,310,432,1446
+8,FL,Walton,320,222,656
+9,FL,Walton,330,93,528
+10,FL,Walton,340,0,0
+11,FL,Walton,350,75,266
+12,FL,Walton,360,89,211
+13,FL,Walton,410,88,448
+14,FL,Walton,420,44,250
+15,FL,Walton,430,359,1369
+16,FL,Walton,440,51,269
+17,FL,Walton,510,0,0
+18,FL,Walton,520,694,2164
+19,FL,Walton,530,435,1039
+20,FL,Walton,540,140,594
+21,FL,Escambia,1,427,1063
+22,FL,Escambia,3,529,1063
+23,FL,Escambia,5,320,1324
+24,FL,Escambia,6,187,598
+25,FL,Escambia,7,447,2109
+26,FL,Escambia,11,82,451
+27,FL,Escambia,14,763,227
+28,FL,Escambia,15,299,966
+29,FL,Escambia,18,42,258
+30,FL,Escambia,19,324,1519
+31,FL,Escambia,21,386,818
+32,FL,Escambia,22,209,187
+33,FL,Escambia,23,38,340
+34,FL,Escambia,24,460,1163
+35,FL,Escambia,25,0,0
+36,FL,Escambia,26,725,2034
+37,FL,Escambia,28,0,0
+38,FL,Escambia,29,386,281
+39,FL,Escambia,30,312,1033
+40,FL,Escambia,31,547,304
+41,FL,Escambia,32,82,154
+42,FL,Escambia,33,56,523
+43,FL,Escambia,34,611,271
+44,FL,Escambia,35,0,0
+45,FL,Escambia,36,309,1056
+46,FL,Escambia,38,392,1550
+47,FL,Escambia,40,284,590
+48,FL,Escambia,41,559,573
+49,FL,Escambia,42,430,1275
+50,FL,Escambia,43,484,2415
+51,FL,Escambia,46,340,1209
+52,FL,Escambia,47,274,206
+53,FL,Escambia,48,504,113
+54,FL,Escambia,49,311,430
+55,FL,Escambia,50,0,0
+56,FL,Escambia,51,491,1046
+57,FL,Escambia,54,292,807
+58,FL,Escambia,55,243,695
+59,FL,Escambia,56,444,296
+60,FL,Escambia,58,0,0
+61,FL,Escambia,60,342,102
+62,FL,Escambia,61,320,645
+63,FL,Escambia,62,502,890
+64,FL,Escambia,63,489,54
+65,FL,Escambia,64,422,767
+66,FL,Escambia,67,499,1936
+67,FL,Escambia,68,289,790
+68,FL,Escambia,69,766,932
+69,FL,Escambia,70,565,652
+70,FL,Escambia,71,331,432
+71,FL,Escambia,72,0,0
+72,FL,Escambia,73,365,1132
+73,FL,Escambia,74,470,2203
+74,FL,Escambia,75,494,1134
+75,FL,Escambia,77,295,351
+76,FL,Escambia,80,109,362
+77,FL,Escambia,82,184,138
+78,FL,Escambia,83,327,704
+79,FL,Escambia,86,470,854
+80,FL,Escambia,88,264,536
+81,FL,Escambia,90,489,149
+82,FL,Escambia,91,648,1648
+83,FL,Escambia,94,352,1077
+84,FL,Escambia,95,203,705
+85,FL,Escambia,97,268,723
+86,FL,Escambia,98,1224,358
+87,FL,Escambia,99,181,488
+88,FL,Escambia,101,229,609
+89,FL,Escambia,102,367,791
+90,FL,Escambia,103,571,345
+91,FL,Escambia,104,482,358
+92,FL,Escambia,105,402,1645
+93,FL,Escambia,106,309,577
+94,FL,Escambia,107,0,0
+95,FL,Escambia,108,551,1180
+96,FL,Escambia,110,56,869
+97,FL,Escambia,111,380,1060
+98,FL,Escambia,112,724,2285
+99,FL,Escambia,113,237,413
+100,FL,Okaloosa,1,0,0
+101,FL,Okaloosa,2,32,328
+102,FL,Okaloosa,3,92,482
+103,FL,Okaloosa,4,85,509
+104,FL,Okaloosa,5,100,400
+105,FL,Okaloosa,6,217,1119
+106,FL,Okaloosa,7,123,549
+107,FL,Okaloosa,8,317,1419
+108,FL,Okaloosa,9,297,1345
+109,FL,Okaloosa,10,546,1697
+110,FL,Okaloosa,11,502,1518
+111,FL,Okaloosa,12,214,90
+112,FL,Okaloosa,13,290,1299
+113,FL,Okaloosa,14,226,864
+114,FL,Okaloosa,15,245,1046
+115,FL,Okaloosa,16,280,961
+116,FL,Okaloosa,17,268,884
+117,FL,Okaloosa,18,269,761
+118,FL,Okaloosa,19,194,354
+119,FL,Okaloosa,20,187,866
+120,FL,Okaloosa,21,257,959
+121,FL,Okaloosa,22,246,595
+122,FL,Okaloosa,23,18,60
+123,FL,Okaloosa,24,309,895
+124,FL,Okaloosa,25,123,613
+125,FL,Okaloosa,26,169,1070
+126,FL,Okaloosa,27,26,99
+127,FL,Okaloosa,28,34,132
+128,FL,Okaloosa,29,0,0
+129,FL,Okaloosa,30,128,495
+130,FL,Okaloosa,31,160,857
+131,FL,Okaloosa,32,261,947
+132,FL,Okaloosa,33,305,2011
+133,FL,Okaloosa,34,293,978
+134,FL,Okaloosa,35,203,1148
+135,FL,Okaloosa,36,199,1019
+136,FL,Okaloosa,37,254,1315
+137,FL,Okaloosa,38,0,0
+138,FL,Okaloosa,39,250,795
+139,FL,Okaloosa,40,221,1368
+140,FL,Okaloosa,41,123,562
+141,FL,Okaloosa,42,288,580
+142,FL,Okaloosa,43,197,782
+143,FL,Okaloosa,44,144,565
+144,FL,Okaloosa,45,415,1240
+145,FL,Okaloosa,46,0,0
+146,FL,Okaloosa,47,124,425
+147,FL,Okaloosa,48,18,87
+148,FL,Okaloosa,49,0,0
+149,FL,Okaloosa,50,237,1223
+150,FL,Okaloosa,51,0,0
+151,FL,Okaloosa,52,0,0
+152,FL,Santa Rosa,1,205,460
+153,FL,Santa Rosa,2,184,1352
+154,FL,Santa Rosa,3,18,352
+155,FL,Santa Rosa,4,73,691
+156,FL,Santa Rosa,5,5,48
+157,FL,Santa Rosa,6,11,61
+158,FL,Santa Rosa,7,32,117
+159,FL,Santa Rosa,8,169,475
+160,FL,Santa Rosa,9,221,926
+161,FL,Santa Rosa,10,92,430
+162,FL,Santa Rosa,11,101,431
+163,FL,Santa Rosa,12,341,1102
+164,FL,Santa Rosa,13,84,619
+165,FL,Santa Rosa,14,83,258
+166,FL,Santa Rosa,15,329,1058
+167,FL,Santa Rosa,16,301,1011
+168,FL,Santa Rosa,17,48,367
+169,FL,Santa Rosa,18,303,1617
+170,FL,Santa Rosa,19,74,549
+171,FL,Santa Rosa,20,347,1956
+172,FL,Santa Rosa,21,296,1372
+173,FL,Santa Rosa,22,583,1981
+174,FL,Santa Rosa,23,265,860
+175,FL,Santa Rosa,24,0,0
+176,FL,Santa Rosa,25,349,1304
+177,FL,Santa Rosa,26,502,2001
+178,FL,Santa Rosa,27,303,1826
+179,FL,Santa Rosa,28,259,1219
+180,FL,Santa Rosa,29,150,746
+181,FL,Santa Rosa,30,243,1363
+182,FL,Santa Rosa,31,95,558
+183,FL,Santa Rosa,32,357,1308
+184,FL,Santa Rosa,33,217,899
+185,FL,Santa Rosa,34,757,2990
+186,FL,Santa Rosa,35,394,1397
+187,FL,Santa Rosa,36,158,854
+188,FL,Santa Rosa,37,0,0
+189,FL,Santa Rosa,38,107,352
+190,FL,Santa Rosa,39,0,0
+191,FL,Santa Rosa,40,124,473
+192,FL,Santa Rosa,41,217,846
+193,FL,Holmes,1,100,435
+194,FL,Holmes,2,85,500
+195,FL,Holmes,3,94,400
+196,FL,Holmes,4,124,656
+197,FL,Holmes,5,52,196
+198,FL,Holmes,6,123,679
