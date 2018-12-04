@@ -2,7 +2,7 @@
 0,FL,St. Lucie,1,1460,973
 1,FL,St. Lucie,6,568,249
 2,FL,St. Lucie,7,730,208
-3,FL,St. Lucie,8,914,619
+3,FL,St. Lucie,8,0,0
 4,FL,St. Lucie,9,895,932
 5,FL,St. Lucie,10,200,90
 6,FL,St. Lucie,11,703,358
@@ -13,14 +13,14 @@
 11,FL,St. Lucie,16,1085,871
 12,FL,St. Lucie,17,1257,21
 13,FL,St. Lucie,18,613,20
-14,FL,St. Lucie,19,0,0
+14,FL,St. Lucie,19,782,138
 15,FL,St. Lucie,20,352,224
 16,FL,St. Lucie,21,789,503
 17,FL,St. Lucie,22,1243,647
 18,FL,St. Lucie,23,1044,539
 19,FL,St. Lucie,24,759,59
-20,FL,St. Lucie,25,0,0
-21,FL,St. Lucie,26,0,0
+20,FL,St. Lucie,25,1263,607
+21,FL,St. Lucie,26,1323,566
 22,FL,St. Lucie,28,514,521
 23,FL,St. Lucie,29,172,98
 24,FL,St. Lucie,31,572,500
@@ -30,7 +30,7 @@
 28,FL,St. Lucie,37,1300,531
 29,FL,St. Lucie,38,442,246
 30,FL,St. Lucie,39,584,415
-31,FL,St. Lucie,40,556,236
+31,FL,St. Lucie,40,0,0
 32,FL,St. Lucie,41,1239,656
 33,FL,St. Lucie,42,1556,1197
 34,FL,St. Lucie,43,865,1082
@@ -40,13 +40,13 @@
 38,FL,St. Lucie,49,1409,685
 39,FL,St. Lucie,50,1914,819
 40,FL,St. Lucie,51,1117,411
-41,FL,St. Lucie,52,539,419
-42,FL,St. Lucie,53,1195,551
-43,FL,St. Lucie,56,0,0
+41,FL,St. Lucie,52,0,0
+42,FL,St. Lucie,53,0,0
+43,FL,St. Lucie,56,847,538
 44,FL,St. Lucie,60,180,117
 45,FL,St. Lucie,63,22,14
 46,FL,St. Lucie,65,223,428
-47,FL,St. Lucie,66,0,0
+47,FL,St. Lucie,66,387,239
 48,FL,St. Lucie,67,844,625
 49,FL,St. Lucie,68,1241,478
 50,FL,St. Lucie,71,1630,685
@@ -54,9 +54,9 @@
 52,FL,St. Lucie,74,965,631
 53,FL,St. Lucie,75,649,271
 54,FL,St. Lucie,82,991,628
-55,FL,St. Lucie,83,0,0
+55,FL,St. Lucie,83,1901,836
 56,FL,St. Lucie,84,1393,680
-57,FL,St. Lucie,85,3510,2092
+57,FL,St. Lucie,85,0,0
 58,FL,St. Lucie,86,811,691
 59,FL,St. Lucie,89,1498,971
 60,FL,St. Lucie,91,25,27
@@ -64,30 +64,30 @@
 62,FL,St. Lucie,93,5,0
 63,FL,St. Lucie,94,0,2
 64,FL,Martin,1,1007,680
-65,FL,Martin,2,0,0
-66,FL,Martin,3,1583,981
-67,FL,Martin,4,0,0
+65,FL,Martin,2,1780,1223
+66,FL,Martin,3,0,0
+67,FL,Martin,4,1090,525
 68,FL,Martin,5,535,426
 69,FL,Martin,6,1473,1167
 70,FL,Martin,7,1896,1126
 71,FL,Martin,8,745,233
 72,FL,Martin,9,653,859
 73,FL,Martin,10,624,548
-74,FL,Martin,11,824,580
-75,FL,Martin,12,1430,1098
+74,FL,Martin,11,0,0
+75,FL,Martin,12,0,0
 76,FL,Martin,13,1700,1511
 77,FL,Martin,14,1374,811
 78,FL,Martin,15,1061,984
 79,FL,Martin,16,325,179
-80,FL,Martin,17,0,0
-81,FL,Martin,18,0,0
+80,FL,Martin,17,726,794
+81,FL,Martin,18,1529,1206
 82,FL,Martin,19,1247,1120
 83,FL,Martin,20,599,508
-84,FL,Martin,21,1335,1810
+84,FL,Martin,21,0,0
 85,FL,Martin,22,1300,1018
 86,FL,Martin,23,1236,928
 87,FL,Martin,24,1236,992
-88,FL,Martin,25,1728,1617
+88,FL,Martin,25,0,0
 89,FL,Martin,26,1500,1483
 90,FL,Martin,27,1527,1483
 91,FL,Martin,28,156,269
