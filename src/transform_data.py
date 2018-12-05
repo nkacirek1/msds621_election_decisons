@@ -75,7 +75,6 @@ def get_old_filepaths(path, alert):
     return paths
 
 
-# TODO: implement this function - grab the filepaths and
 def get_new_filepaths(path, state):
     """
     For a specified alert
@@ -95,6 +94,14 @@ def get_new_filepaths(path, state):
             paths.append((pres_path, midt_path, race))
 
     return paths
+
+
+def get_partial_filepaths():
+    """
+    get the filepaths for the partially reporting files
+    :return: a list of tuples - (president_results, midterm_results, race)
+    """
+    return None
 
 
 if __name__ == '__main__':
