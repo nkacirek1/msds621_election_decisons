@@ -6,7 +6,7 @@ import re
 
 def merge(old, new):
     """
-    Helper method that merges 2016 election full_data frame with incoming 2018 election full_data frame
+    Helper method that merges 2014 election full_data frame with incoming 2018 election full_data frame
     """
     merged_df = pd.merge(old, new, how='outer',
                          on=(['STATE', 'COUNTY', 'PRECINCT']))[['STATE', 'COUNTY',

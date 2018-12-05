@@ -44,7 +44,7 @@ class Votes:
 
     def democraticRatioByStrata(self):
         """
-        Computes the ratio (avg percent voting Democratic in 2018)/(avg percent voting Democratic in 2016) by stratum.
+        Computes the ratio (avg percent voting Democratic in 2018)/(avg percent voting Democratic in 2014) by stratum.
         returns:
             A list of the ratios by strata
         """
@@ -64,7 +64,7 @@ class Votes:
 
     def republicanRatioByStrata(self):
         """
-        Computes the ratio (avg percent voting Republican in 2018)/(avg percent voting Republican in 2016) by stratum.
+        Computes the ratio (avg percent voting Republican in 2018)/(avg percent voting Republican in 2014) by stratum.
         returns:
              A list of the ratios by strata
         """
