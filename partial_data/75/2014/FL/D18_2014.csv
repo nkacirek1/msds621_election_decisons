@@ -1,17 +1,17 @@
 ,STATE,COUNTY,PRECINCT,DEM,REP
 0,FL,St. Lucie,1,1460,973
-1,FL,St. Lucie,6,568,249
+1,FL,St. Lucie,6,0,0
 2,FL,St. Lucie,7,730,208
 3,FL,St. Lucie,8,914,619
 4,FL,St. Lucie,9,895,932
-5,FL,St. Lucie,10,200,90
-6,FL,St. Lucie,11,0,0
+5,FL,St. Lucie,10,0,0
+6,FL,St. Lucie,11,703,358
 7,FL,St. Lucie,12,1454,1091
 8,FL,St. Lucie,13,847,483
 9,FL,St. Lucie,14,1361,94
-10,FL,St. Lucie,15,0,0
-11,FL,St. Lucie,16,1085,871
-12,FL,St. Lucie,17,1257,21
+10,FL,St. Lucie,15,1107,1158
+11,FL,St. Lucie,16,0,0
+12,FL,St. Lucie,17,0,0
 13,FL,St. Lucie,18,613,20
 14,FL,St. Lucie,19,782,138
 15,FL,St. Lucie,20,352,224
@@ -19,9 +19,9 @@
 17,FL,St. Lucie,22,1243,647
 18,FL,St. Lucie,23,1044,539
 19,FL,St. Lucie,24,759,59
-20,FL,St. Lucie,25,0,0
-21,FL,St. Lucie,26,1323,566
-22,FL,St. Lucie,28,514,521
+20,FL,St. Lucie,25,1263,607
+21,FL,St. Lucie,26,0,0
+22,FL,St. Lucie,28,0,0
 23,FL,St. Lucie,29,172,98
 24,FL,St. Lucie,31,0,0
 25,FL,St. Lucie,33,129,71
@@ -29,58 +29,58 @@
 27,FL,St. Lucie,36,554,282
 28,FL,St. Lucie,37,1300,531
 29,FL,St. Lucie,38,442,246
-30,FL,St. Lucie,39,0,0
-31,FL,St. Lucie,40,0,0
-32,FL,St. Lucie,41,0,0
+30,FL,St. Lucie,39,584,415
+31,FL,St. Lucie,40,556,236
+32,FL,St. Lucie,41,1239,656
 33,FL,St. Lucie,42,1556,1197
 34,FL,St. Lucie,43,865,1082
 35,FL,St. Lucie,45,826,457
 36,FL,St. Lucie,46,1027,444
-37,FL,St. Lucie,47,0,0
+37,FL,St. Lucie,47,948,434
 38,FL,St. Lucie,49,1409,685
-39,FL,St. Lucie,50,0,0
-40,FL,St. Lucie,51,0,0
-41,FL,St. Lucie,52,539,419
+39,FL,St. Lucie,50,1914,819
+40,FL,St. Lucie,51,1117,411
+41,FL,St. Lucie,52,0,0
 42,FL,St. Lucie,53,0,0
 43,FL,St. Lucie,56,847,538
 44,FL,St. Lucie,60,180,117
-45,FL,St. Lucie,63,22,14
+45,FL,St. Lucie,63,0,0
 46,FL,St. Lucie,65,223,428
 47,FL,St. Lucie,66,0,0
-48,FL,St. Lucie,67,844,625
+48,FL,St. Lucie,67,0,0
 49,FL,St. Lucie,68,1241,478
-50,FL,St. Lucie,71,0,0
+50,FL,St. Lucie,71,1630,685
 51,FL,St. Lucie,73,1771,776
-52,FL,St. Lucie,74,965,631
+52,FL,St. Lucie,74,0,0
 53,FL,St. Lucie,75,649,271
 54,FL,St. Lucie,82,991,628
-55,FL,St. Lucie,83,0,0
+55,FL,St. Lucie,83,1901,836
 56,FL,St. Lucie,84,1393,680
-57,FL,St. Lucie,85,3510,2092
-58,FL,St. Lucie,86,0,0
+57,FL,St. Lucie,85,0,0
+58,FL,St. Lucie,86,811,691
 59,FL,St. Lucie,89,1498,971
-60,FL,St. Lucie,91,25,27
+60,FL,St. Lucie,91,0,0
 61,FL,St. Lucie,92,41,37
 62,FL,St. Lucie,93,5,0
 63,FL,St. Lucie,94,0,2
-64,FL,Martin,1,1007,680
-65,FL,Martin,2,0,0
-66,FL,Martin,3,1583,981
-67,FL,Martin,4,0,0
-68,FL,Martin,5,0,0
+64,FL,Martin,1,0,0
+65,FL,Martin,2,1780,1223
+66,FL,Martin,3,0,0
+67,FL,Martin,4,1090,525
+68,FL,Martin,5,535,426
 69,FL,Martin,6,1473,1167
 70,FL,Martin,7,0,0
 71,FL,Martin,8,745,233
-72,FL,Martin,9,0,0
+72,FL,Martin,9,653,859
 73,FL,Martin,10,624,548
 74,FL,Martin,11,824,580
-75,FL,Martin,12,1430,1098
-76,FL,Martin,13,1700,1511
-77,FL,Martin,14,1374,811
+75,FL,Martin,12,0,0
+76,FL,Martin,13,0,0
+77,FL,Martin,14,0,0
 78,FL,Martin,15,1061,984
 79,FL,Martin,16,325,179
-80,FL,Martin,17,0,0
-81,FL,Martin,18,1529,1206
+80,FL,Martin,17,726,794
+81,FL,Martin,18,0,0
 82,FL,Martin,19,1247,1120
 83,FL,Martin,20,599,508
 84,FL,Martin,21,1335,1810
@@ -91,6 +91,6 @@
 89,FL,Martin,26,1500,1483
 90,FL,Martin,27,1527,1483
 91,FL,Martin,28,156,269
-92,FL,Martin,29,0,0
+92,FL,Martin,29,647,506
 93,FL,Martin,30,0,0
 94,FL,Martin,31,1030,788
