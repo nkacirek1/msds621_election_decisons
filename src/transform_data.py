@@ -6,7 +6,7 @@ import re
 
 def merge(old, new):
     """
-    Helper method that merges 2016 election data frame with incoming 2018 election data frame
+    Helper method that merges 2016 election full_data frame with incoming 2018 election full_data frame
     """
     merged_df = pd.merge(old, new, how='outer',
                          on=(['STATE', 'COUNTY', 'PRECINCT']))[['STATE', 'COUNTY',
@@ -56,8 +56,8 @@ def get_old_filepaths(path, alert):
     For a specified alert
     :return: the filepaths for a given alertname and the race
     """
-    data2016 = path + 'msds621_election_decisons/data/efs/data2016/'
-    scrape_2018 = path + 'msds621_election_decisons/data/efs/scrape_2018/'
+    data2016 = path + 'msds621_election_decisons/full_data/efs/data2016/'
+    scrape_2018 = path + 'msds621_election_decisons/full_data/efs/scrape_2018/'
 
     paths = []
 
@@ -82,7 +82,7 @@ def get_new_filepaths(path, state):
     :return: a list of tuples - (president_results, midterm_results, race)
     """
 
-    data_path = path + 'msds621_election_decisons/data/'
+    data_path = path + 'msds621_election_decisons/full_data/'
 
     paths = []
 
@@ -114,7 +114,7 @@ if __name__ == '__main__':
 
     abs_path = sys.argv[1]  # absolute path to dir containing the repo
 
-    alerts = [d for d in os.listdir(abs_path + 'msds621_election_decisons/data/efs/data2016/') if not d.startswith('.')]
+    alerts = [d for d in os.listdir(abs_path + 'msds621_election_decisons/full_data/efs/data2016/') if not d.startswith('.')]
 
     path_pairs = []
     for a in alerts:
@@ -124,9 +124,9 @@ if __name__ == '__main__':
         new_df_row = process_one_district(p[0], p[1], p[2], p[2][0], 2018)
         df = df.append(new_df_row)
 
-    # repeat for the new states data
+    # repeat for the new states full_data
     ignore = ['efs', 'Build', 'final.csv', 'full_final.csv']
-    states = [d for d in os.listdir(abs_path + 'msds621_election_decisons/data/')
+    states = [d for d in os.listdir(abs_path + 'msds621_election_decisons/full_data/')
               if not d.startswith('.') and d not in ignore]
 
     path_pairs = []
@@ -137,5 +137,5 @@ if __name__ == '__main__':
         new_df_row = process_one_district(p[0], p[1], p[2], p[2][0], 2014)
         df = df.append(new_df_row)
 
-    df.to_csv(abs_path + 'msds621_election_decisons/data/full_final.csv', index=False)
+    df.to_csv(abs_path + 'msds621_election_decisons/full_data/full_final.csv', index=False)
 

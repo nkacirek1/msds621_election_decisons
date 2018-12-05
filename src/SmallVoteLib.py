@@ -10,7 +10,7 @@ np.seterr(invalid='ignore')
 
 class Votes:
     """
-    - A votes object is instantiated with a data frame object (that already contains
+    - A votes object is instantiated with a full_data frame object (that already contains
     strata assignments that have been correctly collapsed)
     - The list of strata in the object are added as an attribute for easier reference later on
     The first handful of methods are to calculate statistics we need for the latter portion
@@ -18,10 +18,10 @@ class Votes:
     """
 
     def __init__(self, df, midterm_year):
-        # Adding column to original data frame
+        # Adding column to original full_data frame
         df['TOTAL_2016_VOTES'] = df['PAST_DEM'] + df['PAST_REP']
         self.df = df[df['TOTAL_2016_VOTES'] != 0]
-        self.df = self.df[(df.NEW_DEM.notnull()) & (df.PAST_DEM.notnull())]  # Valid incoming data
+        self.df = self.df[(df.NEW_DEM.notnull()) & (df.PAST_DEM.notnull())]  # Valid incoming full_data
         self.midterm_year = midterm_year
         self.df = self.strata_maker(self.df, 6)  # add strata
         self.strata_lst = list(self.df.STRATA.unique())
@@ -105,7 +105,7 @@ class Votes:
 
     def wide_strata_summary(self, race, race_type):
         """
-        CO the data frame per district for ml project
+        CO the full_data frame per district for ml project
         """
         dem_ratios = self.democraticRatioByStrata()
         rep_ratios = self.republicanRatioByStrata()
