@@ -16,8 +16,8 @@ Can we use presidential election data to predict midterm election results? Speci
 ## Data
 We built our data set from ground up, collecting 2012-2014 / 2016-2018 precinct level election results from a variarty of Secretary of State websites. We then worked with domain experts to create useful features. 
 
-* Our final dataset can be found [here](data/final.csv).
-* For more information on how we transformed our [raw votes totals](data) into features, checkout the [source code](src).
+* Our final dataset can be found [here](full_data/final.csv).
+* For more information on how we transformed our [raw votes totals](full_data) into features, checkout the [source code](src).
 
 ## Methods
 * Data pre-processing:
