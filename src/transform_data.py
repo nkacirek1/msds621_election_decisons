@@ -101,7 +101,6 @@ def get_partial_filepaths(path, percent_reporting):
     get the filepaths for the partially reporting files
     :return: a list of tuples - (president_results, midterm_results, race)
     """
-    print(percent_reporting)
 
     data_path = path + 'msds621_election_decisons/partial_data/'
 
@@ -109,7 +108,6 @@ def get_partial_filepaths(path, percent_reporting):
 
     for state in os.listdir(data_path + percent_reporting + '/2014'):
         if not state.startswith('.'):
-            print(state)
             for race_file in os.listdir(data_path + percent_reporting + '/2014/' + state):
                 if not race_file.startswith('.'):
                     mid_path = os.path.abspath(data_path + percent_reporting + '/2014/' + state + '/' + race_file)
@@ -120,7 +118,6 @@ def get_partial_filepaths(path, percent_reporting):
 
     for state in os.listdir(data_path + percent_reporting + '/2018'):
         if not state.startswith('.'):
-            print(state)
             for race_file in os.listdir(data_path + percent_reporting + '/2018/' + state):
                 if not race_file.startswith('.'):
                     mid_path = os.path.abspath(data_path + percent_reporting + '/2018/' + state + '/' + race_file)
