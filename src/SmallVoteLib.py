@@ -114,7 +114,7 @@ class Votes:
         race = self.df['STATE'].unique()[0] + '_' + race
         won = won_2018[race] if self.midterm_year == 2018 else won_2014[race]
 
-        for r in rep_ratios:
+        for r in dem_ratios:
             if r > 6:
                 print(rep_ratios)
                 print(dem_ratios)
