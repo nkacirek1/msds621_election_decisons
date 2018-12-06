@@ -90,18 +90,45 @@ def get_new_filepaths(path, state):
             pres_path = os.path.abspath(data_path+ state + '/Presidential/' + d)
             race, year = re.split('[._]', d)[0:2]
             midt_race = race + '_2014.csv'
-            midt_path = os.path.abspath(data_path+ state + '/Midterm/' + midt_race)
+            midt_path = os.path.abspath(data_path + state + '/Midterm/' + midt_race)
             paths.append((pres_path, midt_path, race))
 
     return paths
 
 
-def get_partial_filepaths():
+def get_partial_filepaths(path, percent_reporting):
     """
     get the filepaths for the partially reporting files
     :return: a list of tuples - (president_results, midterm_results, race)
     """
-    return None
+    print(percent_reporting)
+
+    data_path = path + 'msds621_election_decisons/partial_data/'
+
+    paths = []
+
+    for state in os.listdir(data_path + percent_reporting + '/2014'):
+        if not state.startswith('.'):
+            print(state)
+            for race_file in os.listdir(data_path + percent_reporting + '/2014/' + state):
+                if not race_file.startswith('.'):
+                    mid_path = os.path.abspath(data_path + percent_reporting + '/2014/' + state + '/' + race_file)
+                    race, year = re.split('[._]', race_file)[0:2]
+                    prez_race = race + '_2012.csv'
+                    prez_path = os.path.abspath(path + 'msds621_election_decisons/full_data/' + state + '/Presidential/' + prez_race)
+                    paths.append((prez_path, mid_path, race, 2014))
+
+    for state in os.listdir(data_path + percent_reporting + '/2018'):
+        if not state.startswith('.'):
+            print(state)
+            for race_file in os.listdir(data_path + percent_reporting + '/2018/' + state):
+                if not race_file.startswith('.'):
+                    mid_path = os.path.abspath(data_path + percent_reporting + '/2018/' + state + '/' + race_file)
+                    race, year = re.split('[._]', race_file)[0:2]
+                    prez_path = os.path.abspath(path + 'msds621_election_decisons/full_data/efs/data2016/' + state + '_SOS/' + race + '/results2016.csv')
+                    paths.append((prez_path, mid_path, race, 2018))
+
+    return paths
 
 
 if __name__ == '__main__':
