@@ -120,7 +120,6 @@ class Votes:
                 print(dem_ratios)
                 print(race, self.midterm_year)
 
-
         strata_tbl = pd.DataFrame({
             'STATE': self.df['STATE'].unique()[0],
             'RACE': race_type,
