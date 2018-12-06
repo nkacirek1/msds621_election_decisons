@@ -23,7 +23,7 @@ class Votes:
         self.df = df[df['TOTAL_2016_VOTES'] != 0]
         self.df = self.df[(df.NEW_DEM.notnull()) & (df.PAST_DEM.notnull())]  # Valid incoming full_data
         self.midterm_year = midterm_year
-        self.df = self.strata_maker(self.df, 6)  # add strata
+        self.df = self.strata_maker(self.df, 3)  # add strata
         self.strata_lst = list(self.df.STRATA.unique())
 
     def strata_maker(self, df, num_strata):
@@ -55,7 +55,7 @@ class Votes:
         df_copy['RP_Dem'] = df_copy['Dem_Ratio'] / df_copy['PAST_DEM_Ratio']
         ratio_by_strata = df_copy.groupby('STRATA').mean()['RP_Dem']  # Computing average by strata
         ratio_by_strata_final = [el for el in ratio_by_strata if el > 0]
-        if len(ratio_by_strata) < 6:
+        if len(ratio_by_strata) < 3:
             print(df_copy)
             print(df_copy.STRATA.unique())
             print(ratio_by_strata)
@@ -114,7 +114,7 @@ class Votes:
         race = self.df['STATE'].unique()[0] + '_' + race
         won = won_2018[race] if self.midterm_year == 2018 else won_2014[race]
 
-        for r in dem_ratios:
+        for r in rep_ratios:
             if r > 6:
                 print(rep_ratios)
                 print(dem_ratios)
@@ -127,27 +127,27 @@ class Votes:
             'S1_DEM_RATIO': dem_ratios[0],
             'S2_DEM_RATIO': dem_ratios[1],
             'S3_DEM_RATIO': dem_ratios[2],
-            'S4_DEM_RATIO': dem_ratios[3],
-            'S5_DEM_RATIO': dem_ratios[4],
-            'S6_DEM_RATIO': dem_ratios[5],
+            # 'S4_DEM_RATIO': dem_ratios[3],
+            # 'S5_DEM_RATIO': dem_ratios[4],
+            # 'S6_DEM_RATIO': dem_ratios[5],
             'S1_REP_RATIO': rep_ratios[0],
             'S2_REP_RATIO': rep_ratios[1],
             'S3_REP_RATIO': rep_ratios[2],
-            'S4_REP_RATIO': rep_ratios[3],
-            'S5_REP_RATIO': rep_ratios[4],
-            'S6_REP_RATIO': rep_ratios[5],
+            # 'S4_REP_RATIO': rep_ratios[3],
+            # 'S5_REP_RATIO': rep_ratios[4],
+            # 'S6_REP_RATIO': rep_ratios[5],
             'S1_COR(DD)': dd_cor[0],
             'S2_COR(DD)': dd_cor[1],
             'S3_COR(DD)': dd_cor[2],
-            'S4_COR(DD)': dd_cor[3],
-            'S5_COR(DD)': dd_cor[4],
-            'S6_COR(DD)': dd_cor[5],
+            # 'S4_COR(DD)': dd_cor[3],
+            # 'S5_COR(DD)': dd_cor[4],
+            # 'S6_COR(DD)': dd_cor[5],
             'S1_COR(RR)': rr_cor[0],
             'S2_COR(RR)': rr_cor[1],
             'S3_COR(RR)': rr_cor[2],
-            'S4_COR(RR)': rr_cor[3],
-            'S5_COR(RR)': rr_cor[4],
-            'S6_COR(RR)': rr_cor[5],
+            # 'S4_COR(RR)': rr_cor[3],
+            # 'S5_COR(RR)': rr_cor[4],
+            # 'S6_COR(RR)': rr_cor[5],
             'TIGHT_RACE': self.tight_race(),
             'WINNER': won
         }, index=[0])
