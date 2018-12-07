@@ -1,5 +1,5 @@
 # Midterm Election Classification
-* Checkout of the most recent model run [here](final_project_checkin_template.ipynb). 
+* Checkout of the most recent model run [here](experiments/Final_Model_Run.ipynb). 
 
 Final Project for MSDS621 - Intro to Machine Learning<br>
 Univeristy of San Francisco <br>
