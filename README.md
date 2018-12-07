@@ -16,15 +16,19 @@ Can we use presidential election data to predict midterm election results? Speci
 ## Data
 We built our data set from ground up, collecting 2012-2014 / 2016-2018 precinct level election results from a variarty of Secretary of State websites. We then worked with domain experts to create useful features. 
 
-* Our final dataset can be found [here](full_data/final.csv).
+* Our final datasets can be found [here](full_data).
+* Our partially reporting simulation datasets can be found [here](partial_data).
 * For more information on how we transformed our [raw votes totals](full_data) into features, checkout the [source code](src).
 
 ## Methods
 * Data pre-processing:
   - scikit-learn LabelEncoder
-  - scikit-learn train_test_split
+  - scikit-learn LeaveOneOut cross validation
+  - oversample tight races
 * Model:
   - scikit-learn DecisionTreeClassifier
+  - scikit-learn RandomForestClassifier
+  - scikit-learn RandomForestClassifier
 
 ## Evaluation
-Our current classifer has an accuracy of 90% on our testing set. 
+Our best classifer is GradientBoostingClassifier. It has an average accuracy of 86.8% on our testing set, and 92.2% on the tight races within the testing set.
