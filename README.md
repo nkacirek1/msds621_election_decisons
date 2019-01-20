@@ -1,5 +1,5 @@
 # Midterm Election Classification
-* Checkout of the most recent model run [here](experiments/Final_Model_Run.ipynb). 
+* Checkout of the most recent [model run](experiments/Final_Model_Run.ipynb) and the [final presenation](https://docs.google.com/presentation/d/1g5ipS_9XV3nwQz-FQDJTJi3o_W2bv-dxbK2Yd1gWkGw/edit?usp=sharing).
 
 Final Project for MSDS621 - Intro to Machine Learning<br>
 Univeristy of San Francisco <br>
