@@ -28,7 +28,7 @@ We built our data set from ground up, collecting 2012-2014 / 2016-2018 precinct 
 * Model:
   - scikit-learn DecisionTreeClassifier
   - scikit-learn RandomForestClassifier
-  - scikit-learn RandomForestClassifier
+  - scikit-learn GradientBoostingClassifier
 
 ## Evaluation
 Our best classifer is GradientBoostingClassifier. It has an average accuracy of 86.8% on our testing set, and 92.2% on the tight races within the testing set.
